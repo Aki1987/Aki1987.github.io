@@ -1,0 +1,419 @@
+﻿<!--<!DOCTYPE HTML>-->
+<!--<html>
+<head>
+    <title>Sakii-chungket</title>
+<meta http-equiv="refresh" content="60">
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+</head>
+<body>
+<div id="ytplayer"></div>
+<div id="ytplayer1"></div>
+<div id="ytplayer2"></div>
+<div id="ytplayer3"></div>
+<div id="ytplayer4"></div>
+<div id="ytplayer5"></div>
+<div id="ytplayer6"></div>
+<div id="ytplayer7"></div>
+<div id="ytplayer8"></div>
+<div id="ytplayer9"></div>
+<div id="ytplayer10"></div>
+<div id="ytplayer11"></div>
+<div id="ytplayer12"></div>
+<div id="ytplayer13"></div>
+<div id="ytplayer14"></div>
+<div id="ytplayer15"></div>
+<div id="ytplayer16"></div>
+<div id="ytplayer17"></div>
+<div id="ytplayer18"></div>
+<div id="ytplayer19"></div>
+
+<script>
+  // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+    var player;
+
+    function onYouTubePlayerAPIReady() {
+      //function onYouTubePlayerAPIReady() {
+        var arrplayer = ['ytplayer', 'ytplayer1', 'ytplayer2', 'ytplayer3', 'ytplayer4', 'ytplayer5', 'ytplayer6', 'ytplayer7', 'ytplayer8',
+        'ytplayer9', 'ytplayer10', 'ytplayer11', 'ytplayer12', 'ytplayer13', 'ytplayer14', 'ytplayer15', 'ytplayer16', 'ytplayer17', 'ytplayer18', 'ytplayer19' ]
+        arrplayer.forEach(function (element) {
+            //console.log(element);
+            player = new YT.Player(element, {
+                height: '90',
+                width: '160',
+                videoId: '5xmqM04jJfQ',
+                playerVars: {
+                    autoplay: 1,        // Auto-play the video on load
+                    controls: 0,        // Show pause/play buttons in player
+                    showinfo: 0,        // Hide the video title
+                    modestbranding: 1,  // Hide the Youtube Logo
+                    fs: 1,              // Hide the full screen button
+                    cc_load_policy: 0, // Hide closed captions
+                    iv_load_policy: 3,  // Hide the Video Annotations
+                    start: 0,
+                    //end: 45,
+                    loop: 1,            // Run the video in a loop
+                    autohide: 0         // Hide video controls when playing
+                },
+            });
+        });
+
+    //player1 = new YT.Player('ytplayer1', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player3 = new YT.Player('ytplayer3', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player4 = new YT.Player('ytplayer4', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player5 = new YT.Player('ytplayer5', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player6 = new YT.Player('ytplayer6', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player7 = new YT.Player('ytplayer7', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player8 = new YT.Player('ytplayer8', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player9 = new YT.Player('ytplayer9', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player10 = new YT.Player('ytplayer10', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player11 = new YT.Player('ytplayer11', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+
+    }
+
+</script>
+</body>
+</html>-->
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- META DATA -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--font-family-->
+    <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+
+    <!-- TITLE OF SITE -->
+    <title>SaKii</title>
+
+    <!-- favicon img -->
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png" />
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+
+    <!--hover.css-->
+    <link rel="stylesheet" href="assets/css/hover-min.css">
+
+    <!--datepicker.css-->
+    <link rel="stylesheet" href="assets/css/datepicker.css">
+
+    <!--owl.carousel.css-->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+
+    <!-- range css-->
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css" />
+
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+        your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <!-- main-menu Start -->
+    <header class="top-area">
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="logo">
+                            <a href="index.html">
+                                Sara<span>Jaykii</span>
+                            </a>
+                        </div><!-- /.logo-->
+
+                    </div><!-- /.col-->
+                   
+                </div><!-- /.row -->
+                <div class="home-border"></div><!-- /.home-border-->
+            </div><!-- /.container-->
+        </div><!-- /.header-area -->
+
+    </header><!-- /.top-area-->
+    <!-- main-menu End -->
+    <!--about-us start -->
+    <section id="myhome" class="about-us">
+        <div class="container">
+            <div class="about-us-content">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <div class="about-us-txt">
+                            <h2>
+                                Tạm thời chưa có link đêm chung kết nhé các tình yêu.                               
+
+                            </h2>
+                        <hr />
+                            <div class="logo">
+                                <a href="index.html">
+                                    SaraJaykii<span>Homepage</span>
+                                </a>
+                            </div><!-- /.logo-->
+                        </div><!--/.about-us-txt-->
+
+                    </div><!--/.col-->
+                    <div class="col-sm-0">
+                        <div class="single-about-us">
+
+                        </div><!--/.single-about-us-->
+                    </div><!--/.col-->
+                </div><!--/.row-->
+            </div><!--/.about-us-content-->
+        </div><!--/.container-->
+
+    </section><!--/.about-us-->
+
+
+
+
+
+
+
+
+    <script src="assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+    <!--bootstrap.min.js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- bootsnav js -->
+    <script src="assets/js/bootsnav.js"></script>
+
+    <!-- jquery.filterizr.min.js -->
+    <script src="assets/js/jquery.filterizr.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!--jquery-ui.min.js-->
+    <script src="assets/js/jquery-ui.min.js"></script>
+
+    <!-- counter js -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+
+    <!--owl.carousel.js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <!-- jquery.sticky.js -->
+    <script src="assets/js/jquery.sticky.js"></script>
+
+    <!--datepicker.js-->
+    <script src="assets/js/datepicker.js"></script>
+
+    <!--Custom JS-->
+    <script src="assets/js/custom.js"></script>
+
+
+</body>
+
+</html>

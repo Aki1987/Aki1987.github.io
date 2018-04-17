@@ -1,0 +1,254 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Sakii-HuyenViet</title>
+<meta http-equiv="refresh" content="60"> 
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+</head>
+<body>
+<div id="ytplayer"></div>
+<div id="ytplayer1"></div>
+<div id="ytplayer2"></div>
+<div id="ytplayer3"></div>
+<div id="ytplayer4"></div>
+<div id="ytplayer5"></div>
+<div id="ytplayer6"></div>
+<div id="ytplayer7"></div>
+<div id="ytplayer8"></div>
+<div id="ytplayer9"></div>
+<div id="ytplayer10"></div>
+<div id="ytplayer11"></div>
+<div id="ytplayer12"></div>
+<div id="ytplayer13"></div>
+<div id="ytplayer14"></div>
+<div id="ytplayer15"></div>
+<div id="ytplayer16"></div>
+<div id="ytplayer17"></div>
+<div id="ytplayer18"></div>
+<div id="ytplayer19"></div>
+
+<script>
+  // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+    var player;
+    
+    function onYouTubePlayerAPIReady() {
+      //function onYouTubePlayerAPIReady() {
+        var arrplayer = ['ytplayer', 'ytplayer1', 'ytplayer2', 'ytplayer3', 'ytplayer4', 'ytplayer5', 'ytplayer6', 'ytplayer7', 'ytplayer8',
+        'ytplayer9', 'ytplayer10', 'ytplayer11', 'ytplayer12', 'ytplayer13', 'ytplayer14', 'ytplayer15', 'ytplayer16', 'ytplayer17', 'ytplayer18', 'ytplayer19' ]
+        arrplayer.forEach(function (element) {
+            //console.log(element);
+            player = new YT.Player(element, {
+                height: '90',
+                width: '160',
+                videoId: '5xmqM04jJfQ',
+                playerVars: {
+                    autoplay: 1,        // Auto-play the video on load
+                    controls: 0,        // Show pause/play buttons in player
+                    showinfo: 0,        // Hide the video title
+                    modestbranding: 1,  // Hide the Youtube Logo
+                    fs: 1,              // Hide the full screen button
+                    cc_load_policy: 0, // Hide closed captions
+                    iv_load_policy: 3,  // Hide the Video Annotations
+                    start: 0,
+                    //end: 45,
+                    loop: 1,            // Run the video in a loop
+                    autohide: 0         // Hide video controls when playing
+                },
+            });
+        });
+    
+    //player1 = new YT.Player('ytplayer1', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player3 = new YT.Player('ytplayer3', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player4 = new YT.Player('ytplayer4', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player5 = new YT.Player('ytplayer5', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player6 = new YT.Player('ytplayer6', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player7 = new YT.Player('ytplayer7', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player8 = new YT.Player('ytplayer8', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player9 = new YT.Player('ytplayer9', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player10 = new YT.Player('ytplayer10', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+    //player11 = new YT.Player('ytplayer11', {
+    //    height: '90',
+    //    width: '160',
+    //    videoId: 'cOkHlcP_BU0',
+    //    playerVars: {
+    //        autoplay: 1,        // Auto-play the video on load
+    //        controls: 0,        // Show pause/play buttons in player
+    //        showinfo: 0,        // Hide the video title
+    //        modestbranding: 1,  // Hide the Youtube Logo
+    //        fs: 1,              // Hide the full screen button
+    //        cc_load_policy: 0, // Hide closed captions
+    //        iv_load_policy: 3,  // Hide the Video Annotations
+    //        start: 0,
+    //        //end: 45,
+    //        loop: 1,            // Run the video in a loop
+    //        autohide: 0         // Hide video controls when playing
+    //    },
+    //});
+
+    }
+    
+</script>
+</body>
+</html>
