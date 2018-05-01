@@ -30,225 +30,42 @@
 <div id="ytplayer18"></div>
 <div id="ytplayer19"></div>
 
-<script>
-  // Load the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-    tag.src = "https://mp3.zing.vn/bai-hat/Dung-Nhu-Thoi-Quen-JayKii-Sara-Luu/ZW9C0WDI.html";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    // Replace the 'ytplayer' element with an <iframe> and
-    // YouTube player after the API code downloads.
-    var player;
-    
-    function onYouTubePlayerAPIReady() {
-      //function onYouTubePlayerAPIReady() {
-        var arrplayer = ['ytplayer', 'ytplayer1', 'ytplayer2', 'ytplayer3', 'ytplayer4', 'ytplayer5', 'ytplayer6', 'ytplayer7', 'ytplayer8',
-        'ytplayer9', 'ytplayer10', 'ytplayer11', 'ytplayer12', 'ytplayer13', 'ytplayer14', 'ytplayer15', 'ytplayer16', 'ytplayer17', 'ytplayer18', 'ytplayer19' ]
-        arrplayer.forEach(function (element) {
-            //console.log(element);
-            player = new YT.Player(element, {
-                height: '90',
-                width: '160',
-                videoId: '5hn3X0tXSJc',
-                playerVars: {
-                    autoplay: 1,        // Auto-play the video on load
-                    controls: 0,        // Show pause/play buttons in player
-                    showinfo: 0,        // Hide the video title
-                    modestbranding: 1,  // Hide the Youtube Logo
-                    fs: 1,              // Hide the full screen button
-                    cc_load_policy: 0, // Hide closed captions
-                    iv_load_policy: 3,  // Hide the Video Annotations
-                    start: 0,
-                    //end: 45,
-                    loop: 1,            // Run the video in a loop
-                    autohide: 0         // Hide video controls when playing
-                },
+<script language="javascript">
+    var flObject    = swfobject.getFlashPlayerVersion();
+    var isHtml5     = (location.search.indexOf('isHtml5') != -1) ? true : false;
+    var isDisHtml5  = false;
+    switch (true) {
+        case navigator.userAgent.indexOf('Firefox') > -1:
+            isDisHtml5  = true;
+            break;
+        case navigator.userAgent.indexOf('MSIE') > -1:
+            isDisHtml5  = true;
+            break;
+    }
+    if ((!isDisHtml5 && flObject.major == 0) || isHtml5) {
+        zm('#oplayer').remove();
+        zm('#_htmlPlayer').removeClass('none');
+        var HTML5_SKIN  = 'skins/jplayer_01';
+        document.write('<link href="http://static.mp3.zdn.vn/' + HTML5_SKIN + '/css/skin.css" rel="stylesheet" type="text/css" />');
+        zmCore.addScript('http://static.mp3.zdn.vn/' + HTML5_SKIN + '/js/jquery.min.js', function () {
+            zmCore.addScript('http://static.mp3.zdn.vn/' + HTML5_SKIN + '/js/jquery.jplayer.min.js', function () {
+                $("#jquery_jplayer_1").jPlayer({
+                    ready: function () {
+                        $(this).jPlayer("setMedia", {
+                            mp3: "[http://mp3.zing.vn/html5/song/LHcnypFzWANATyDGkH][1]"
+                        });
+                        $(this).jPlayer("play");
+                    },
+                    solution: "html",
+                    supplied: "mp3"
+                });
             });
         });
-    
-    //player1 = new YT.Player('ytplayer1', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-    //player3 = new YT.Player('ytplayer3', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-    //player4 = new YT.Player('ytplayer4', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-    //player5 = new YT.Player('ytplayer5', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-    //player6 = new YT.Player('ytplayer6', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-    //player7 = new YT.Player('ytplayer7', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-    //player8 = new YT.Player('ytplayer8', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-    //player9 = new YT.Player('ytplayer9', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-    //player10 = new YT.Player('ytplayer10', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-    //player11 = new YT.Player('ytplayer11', {
-    //    height: '90',
-    //    width: '160',
-    //    videoId: 'cOkHlcP_BU0',
-    //    playerVars: {
-    //        autoplay: 1,        // Auto-play the video on load
-    //        controls: 0,        // Show pause/play buttons in player
-    //        showinfo: 0,        // Hide the video title
-    //        modestbranding: 1,  // Hide the Youtube Logo
-    //        fs: 1,              // Hide the full screen button
-    //        cc_load_policy: 0, // Hide closed captions
-    //        iv_load_policy: 3,  // Hide the Video Annotations
-    //        start: 0,
-    //        //end: 45,
-    //        loop: 1,            // Run the video in a loop
-    //        autohide: 0         // Hide video controls when playing
-    //    },
-    //});
-
     }
-    
+    $(this).jPlayer("setMedia", {
+                                mp3: "[http://mp3.zing.vn/html5/song/ZW9C0WDI][1]"
+                            });
+                            $(this).jPlayer("play");
 </script>
 </body>
 </html>
