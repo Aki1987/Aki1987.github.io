@@ -70,6 +70,8 @@
     		}
             });
         });
+	iframe = $('#ytplayer');
+  setupListener(); 
     player1 = new YT.Player('ytplayer', {
         height: '360',
         width: '640',
