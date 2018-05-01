@@ -9,63 +9,8 @@
 <meta http-equiv='pragma' content='no-cache'>
 </head>
 <body>
-<div id="ytplayer"></div>
-<div id="ytplayer1"></div>
-<div id="ytplayer2"></div>
-<div id="ytplayer3"></div>
-<div id="ytplayer4"></div>
-<div id="ytplayer5"></div>
-<div id="ytplayer6"></div>
-<div id="ytplayer7"></div>
-<div id="ytplayer8"></div>
-<div id="ytplayer9"></div>
-<div id="ytplayer10"></div>
-<div id="ytplayer11"></div>
-<div id="ytplayer12"></div>
-<div id="ytplayer13"></div>
-<div id="ytplayer14"></div>
-<div id="ytplayer15"></div>
-<div id="ytplayer16"></div>
-<div id="ytplayer17"></div>
-<div id="ytplayer18"></div>
-<div id="ytplayer19"></div>
+[ZINGMP3="song"]ZW9C0WDI[/ZINGMP3]
+[ZINGMP3="song"]ZW9C0WDI[/ZINGMP3]
 
-<script language="javascript">
-    var flObject    = swfobject.getFlashPlayerVersion();
-    var isHtml5     = (location.search.indexOf('isHtml5') != -1) ? true : false;
-    var isDisHtml5  = false;
-    switch (true) {
-        case navigator.userAgent.indexOf('Firefox') > -1:
-            isDisHtml5  = true;
-            break;
-        case navigator.userAgent.indexOf('MSIE') > -1:
-            isDisHtml5  = true;
-            break;
-    }
-    if ((!isDisHtml5 && flObject.major == 0) || isHtml5) {
-        zm('#oplayer').remove();
-        zm('#_htmlPlayer').removeClass('none');
-        var HTML5_SKIN  = 'skins/jplayer_01';
-        document.write('<link href="http://static.mp3.zdn.vn/' + HTML5_SKIN + '/css/skin.css" rel="stylesheet" type="text/css" />');
-        zmCore.addScript('http://static.mp3.zdn.vn/' + HTML5_SKIN + '/js/jquery.min.js', function () {
-            zmCore.addScript('http://static.mp3.zdn.vn/' + HTML5_SKIN + '/js/jquery.jplayer.min.js', function () {
-                $("#jquery_jplayer_1").jPlayer({
-                    ready: function () {
-                        $(this).jPlayer("setMedia", {
-                            mp3: "[http://mp3.zing.vn/html5/song/LHcnypFzWANATyDGkH][1]"
-                        });
-                        $(this).jPlayer("play");
-                    },
-                    solution: "html",
-                    supplied: "mp3"
-                });
-            });
-        });
-    }
-    $(this).jPlayer("setMedia", {
-                                mp3: "[http://mp3.zing.vn/html5/song/ZW9C0WDI][1]"
-                            });
-                            $(this).jPlayer("play");
-</script>
 </body>
 </html>
