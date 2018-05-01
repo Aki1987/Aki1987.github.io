@@ -8,6 +8,7 @@
 <meta http-equiv='pragma' content='no-cache'>
 </head>
 <body>
+<button>play fullscreen</button><br>
 <div id="ytplayer"></div>
 <div id="ytplayer1"></div>
 <div id="ytplayer2"></div>
@@ -88,6 +89,18 @@
         },
     });
     }
+    function setupListener (){
+$('button').addEventListener('click', playFullscreen);
+}
+
+function playFullscreen (){
+  player.playVideo();//won't work on mobile
+  
+  var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+  if (requestFullScreen) {
+    requestFullScreen.bind(iframe)();
+  }
+}
     
 </script>
 </body>
