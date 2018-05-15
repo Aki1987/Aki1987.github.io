@@ -9,25 +9,25 @@
 </head>
 <body>
 <div id="ytplayer"></div>
-<div id="ytplayer1"></div>
-<div id="ytplayer2"></div>
-<div id="ytplayer3"></div>
-<div id="ytplayer4"></div>
-<div id="ytplayer5"></div>
-<div id="ytplayer6"></div>
-<div id="ytplayer7"></div>
-<div id="ytplayer8"></div>
-<div id="ytplayer9"></div>
-<div id="ytplayer10"></div>
-<div id="ytplayer11"></div>
-<div id="ytplayer12"></div>
-<div id="ytplayer13"></div>
-<div id="ytplayer14"></div>
-<div id="ytplayer15"></div>
-<div id="ytplayer16"></div>
-<div id="ytplayer17"></div>
-<div id="ytplayer18"></div>
-<div id="ytplayer19"></div>
+//<div id="ytplayer1"></div>
+//<div id="ytplayer2"></div>
+//<div id="ytplayer3"></div>
+//<div id="ytplayer4"></div>
+//<div id="ytplayer5"></div>
+//<div id="ytplayer6"></div>
+//<div id="ytplayer7"></div>
+//<div id="ytplayer8"></div>
+//<div id="ytplayer9"></div>
+//<div id="ytplayer10"></div>
+//<div id="ytplayer11"></div>
+//<div id="ytplayer12"></div>
+//<div id="ytplayer13"></div>
+//<div id="ytplayer14"></div>
+//<div id="ytplayer15"></div>
+//<div id="ytplayer16"></div>
+//<div id="ytplayer17"></div>
+//<div id="ytplayer18"></div>
+//<div id="ytplayer19"></div>
 
 <script>
   // Load the IFrame Player API code asynchronously.
@@ -41,7 +41,7 @@
     
     function onYouTubePlayerAPIReady() {
       //function onYouTubePlayerAPIReady() {
-        var arrplayer = ['ytplayer1', 'ytplayer2', 'ytplayer3', 'ytplayer4', 'ytplayer5', 'ytplayer6', 'ytplayer7', 'ytplayer8',
+       <!-- var arrplayer = ['ytplayer1', 'ytplayer2', 'ytplayer3', 'ytplayer4', 'ytplayer5', 'ytplayer6', 'ytplayer7', 'ytplayer8',
         'ytplayer9', 'ytplayer10', 'ytplayer11', 'ytplayer12', 'ytplayer13', 'ytplayer14', 'ytplayer15', 'ytplayer16', 'ytplayer17', 'ytplayer18', 'ytplayer19' ]
         arrplayer.forEach(function (element) {
             //console.log(element);
@@ -68,7 +68,7 @@
       			//}
     		//}
             });
-        });
+        });-->
     player1 = new YT.Player('ytplayer', {
         height: '360',
         width: '640',
@@ -89,6 +89,15 @@
     });
 
     }
-    
+    var images = ['assets/images/home/banner.jpg', 'assets/images/home/banner1.jpg', 'assets/images/home/banner.jpg'];
+var i = 0;
+setInterval(function(){
+    $('body').css('background-image', function() {
+        if (i >= images.length) {
+            i=0;
+        }
+        return 'url(' + images[i++] + ')'; 
+    });
+}, 5000);
 </script>
 </body>
