@@ -190,9 +190,11 @@
 		var dtNow = new Date();
 		var dt_start = new Date(2018, 6, 29, 6, 0, 0, 0);
             	var dt_end = addDays(dt_start,40*7);
+		alert(dt_start);
+		alert(dt_end);
 		var week = Math.ceil(parseInt((dtNow-dt_start)/(1000*60*24*7)));
-		$("#txtweek").value = week;
-		$("#txtpredic").value = dt_end;
+		document.getElementById('txtweek').value = week;
+		document.getElementById('txtpredic').value = dt_end;		
 		function addDays(date, days) {
 		  var result = new Date(date);
 		  result.setDate(result.getDate() + days);
