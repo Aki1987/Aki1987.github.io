@@ -187,17 +187,17 @@
 <script>
 	
 	var dtNow = new Date();
-	var dt_start = new Date(2018, 6, 29, 6, 0, 0, 0);
-	var dt_end = addDays(dt_start,40*7);
-	alert(dt_end);
-	var week = Math.ceil(parseInt((dtNow-dt_start)/(1000*60*60*24*7)));
+	var dt_start = new Date("6/29/2018");
+	var diffDays = Math.floor(( dtNow - dt_start) / (1000 * 60 * 60 * 24)); 
+	var week = Math.ceil(diffDays/7);
 	document.getElementById('txtweek').value = week;
-	document.getElementById('txtpredic').value = dt_end;		
+	var dt_end = addDays(dt_start,40*7);	
+    	document.getElementById('txtpredic').value = dt_end;
 	function addDays(date, days) {
 	  var result = date;
 	  result.setDate(result.getDate() + days);
 	  return result;
-	};	
+	};
 	  
 	</script>
 	</body>
