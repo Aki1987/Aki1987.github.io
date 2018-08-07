@@ -74,7 +74,7 @@
 						<div class="col-sm-2">
 							<div class="logo">
 								<a href="index.html">
-									Sara<span>Jaykii</span>
+									<span>Welcome HanDu page</span>
 								</a>
 							</div><!-- /.logo-->
                             
@@ -105,33 +105,25 @@
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="AnhSeTotMa.html" target="_blank">Anh Se Tot Ma</a>
+                                            This week:
                                         </td>
                                         <td>
-                                            <a href="emchua18.html" target="_blank">Em Chua 18-GDCD</a>
+                                            <input type="number" id="txtweek" name="week" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="test2.html" target="_blank">Tim</a>
+                                            Prediction Date
                                         </td>
                                         <td>
-                                            <a href="emchua18-Mocthi.html" target="_blank">Em Chua 18-MocThi</a>
+                                            <input type="text" id="txtpredic" name="datepredic" />
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="AnhSeTotMa.html" target="_blank">Cho nhau nhe </a>
-                                        </td>
-                                        <td>
-                                            <a href="chungket-sakii.html" target="_blank">Dem chung ket</a>
-                                        </td>
-                                    </tr>
+                                    </tr>                                    
                                 </table>
                             </div><!-- /.navbar-collapse -->
 								<div class="about-us-txt">
 									<h2>
-										Chúng ta cùng nhau cày view cho SaKii nào 
+										Love all 
 
 									</h2>
 									
@@ -204,6 +196,20 @@ setInterval(function(){
         return 'url(' + images[i++] + ')'; 
     });
 }, 5000);
+	$(document).ready(function () {
+		var dtNow = new Date();
+		var dt_start = new Date(2018, 6, 29, 6, 0, 0, 0);
+            	var dt_end = addDays(dt_start,40*7);
+		var week = Math.ceil(parseInt((dtNow-dt_start)/(1000*60*24*7)));
+		$("#txtweek").value = week;
+		$("#txtpredic").value = dt_end;
+		function addDays(date, days) {
+		  var result = new Date(date);
+		  result.setDate(result.getDate() + days);
+		  return result;
+		};
+	}
+	  
 	</script>
 	</body>
 
